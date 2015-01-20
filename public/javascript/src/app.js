@@ -1,30 +1,17 @@
 
 var React = require('react');
-var Navbar = require('./components/navbar');
-var Main = require('./components/main');
 
-var KapiApp = React.createClass({
-  loadData: function() {
-    return $.get('http://localhost:3000/user/5481e9662f3b8d8a053a7330');
-  },
-  componentWillMount: function() {
-
-  },
-  componentDidMount: function() {
-    this.loadData().then(function(data) {console.log(data);});
-  },
+var App = React.createClass({
+  
   render: function() {
     return (
-      <div>
-        <Navbar />
-        <Main />
-      </div>
+      <div />
     );
   }
 });
 
 React.render(
-  <KapiApp />,
+  <App />,
   document.getElementById('app')
 );
 //$('.ui.modal').modal('show');
